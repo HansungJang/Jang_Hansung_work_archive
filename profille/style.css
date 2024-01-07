@@ -1,0 +1,123 @@
+/*Animation */
+@keyframes rolling{
+    /*Sol 1.  margin 사용하는 방법
+    
+    0%{
+                margin-top: 0;
+    }
+    25%{        margin-top: -1.5em;
+    }
+    50%{        margin-top: -3em;
+    }
+    75%{        margin-top: -4.5em;
+    }
+    100%{
+        margin-top: -6em;
+    }
+    
+    */
+
+    /*Sol 2. transform, translate 활용 기법 (%비율 로 이동)  */
+    0%{         transform: translateY(0); 
+    }
+    25%{        transform: translateY(-20%);
+    }
+    50%{        transform: translateY(-40%);
+    }
+    75%{        transform: translateY(-60%);
+    }
+    100%{       transform: translateY(-80%);
+    }
+
+}
+
+
+/*[시작] CSS 작업에 앞서 reset과정!*/
+
+body, h1, p, ul{
+    margin: 0;
+    padding: 0;
+}
+
+/*ul의 순서 첨자 삭제*/
+li{
+list-style-type: none;
+}
+
+
+/*h의 글자 크기, 문체 수정*/
+h1{
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/*a의 밑줄, 색상 삭제 및 통일*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*[끝] CSS 작업에 앞서 reset과정!*/
+
+
+body{
+    background-color: black;
+    color: #999;
+}
+
+.portrait 
+{
+    background-image: url(profile.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 59.95%;
+}
+.profile
+{
+    padding: 7%;
+}
+
+.profile-header, .profile-section {
+    padding-bottom: 7%;
+}
+
+.name{
+    font-size: 30px;
+    line-height: 1.5;
+    font-style: italic; 
+    /*tip, 글자의 간격, 너무 붙어 있으면 글자가 일부 짤리는 경우가 있다.*/
+    /*이름이 순차적으로 올라가는 작업 위해서, 좌표 초기 위치 설정*/
+    /*순차적으로 내려가는 모션을 구현하기 위해서, 간격: 30px -> 30이라고 생각! */
+    margin-bottom: 30px; 
+}
+
+.name-job{
+    display: inline-block;
+    color: white;
+    /*background-color: red;*/
+    vertical-align: top; /*web의 상단 부분 맞추는 작업*/
+
+    /*직업 이름 움직이는 원리*/
+    height: 1.5em; /*(영역 정하기) 높이 제한, 보이는 글자의 최고 font크기를 설정*/
+    overflow: hidden; /*(숨기기) 영역에서 벋어나는 글자 숨기기 */
+    /*직업 이름 올라가게 하는 원리, 좌표 이동*/
+    /*margin 요소는 뒤에 오는 요소에 영향을 준다! so, html에서 움직일 영역으로 나뉘어 준다*/
+
+    /*오른쪽 글씨가 짤려서 확장*/
+    padding-right: 0.5em;
+}
+
+.name-job-list{
+    /*margin-top: 0em; 비율이 유동적으로 변화할수 있도록 조정해 두는 것*/
+    animation-name: rolling;
+    animation-duration: 5s; /*넘어가는 속도*/
+    animation-iteration-count: infinite; /*반복되는 횟수 loop*/
+    /*animation 연출 방향, animation-direction*/
+
+}
+
+.name-title{
+    font-size: 1.5em; /*이름 font의 크기 변화, name이라는 div의 설정에 비례하여 변동*/
+    line-height: 1;
+    color: white;
+}

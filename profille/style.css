@@ -1,6 +1,6 @@
 /*Animation */
 @keyframes rolling{
-    /*Sol 1.  margin »ç¿ëÇÏ´Â ¹æ¹ı
+    /*Sol 1.  margin ì‚¬ìš©í•˜ëŠ” ë°©ë²•
     
     0%{
                 margin-top: 0;
@@ -17,7 +17,7 @@
     
     */
 
-    /*Sol 2. transform, translate È°¿ë ±â¹ı (%ºñÀ² ·Î ÀÌµ¿)  */
+    /*Sol 2. transform, translate í™œìš© ê¸°ë²• (%ë¹„ìœ¨ ë¡œ ì´ë™)  */
     0%{         transform: translateY(0); 
     }
     25%{        transform: translateY(-20%);
@@ -32,32 +32,32 @@
 }
 
 
-/*[½ÃÀÛ] CSS ÀÛ¾÷¿¡ ¾Õ¼­ reset°úÁ¤!*/
+/*[ì‹œì‘] CSS ì‘ì—…ì— ì•ì„œ resetê³¼ì •!*/
 
 body, h1, p, ul{
     margin: 0;
     padding: 0;
 }
 
-/*ulÀÇ ¼ø¼­ Ã·ÀÚ »èÁ¦*/
+/*ulì˜ ìˆœì„œ ì²¨ì ì‚­ì œ*/
 li{
 list-style-type: none;
 }
 
 
-/*hÀÇ ±ÛÀÚ Å©±â, ¹®Ã¼ ¼öÁ¤*/
+/*hì˜ ê¸€ì í¬ê¸°, ë¬¸ì²´ ìˆ˜ì •*/
 h1{
     font-size: 100%;
     font-weight: normal;
 }
 
-/*aÀÇ ¹ØÁÙ, »ö»ó »èÁ¦ ¹× ÅëÀÏ*/
+/*aì˜ ë°‘ì¤„, ìƒ‰ìƒ ì‚­ì œ ë° í†µì¼*/
 a{
     color: inherit;
     text-decoration: none;
 }
 
-/*[³¡] CSS ÀÛ¾÷¿¡ ¾Õ¼­ reset°úÁ¤!*/
+/*[ë] CSS ì‘ì—…ì— ì•ì„œ resetê³¼ì •!*/
 
 
 body{
@@ -85,9 +85,9 @@ body{
     font-size: 30px;
     line-height: 1.5;
     font-style: italic; 
-    /*tip, ±ÛÀÚÀÇ °£°İ, ³Ê¹« ºÙ¾î ÀÖÀ¸¸é ±ÛÀÚ°¡ ÀÏºÎ Â©¸®´Â °æ¿ì°¡ ÀÖ´Ù.*/
-    /*ÀÌ¸§ÀÌ ¼øÂ÷ÀûÀ¸·Î ¿Ã¶ó°¡´Â ÀÛ¾÷ À§ÇØ¼­, ÁÂÇ¥ ÃÊ±â À§Ä¡ ¼³Á¤*/
-    /*¼øÂ÷ÀûÀ¸·Î ³»·Á°¡´Â ¸ğ¼ÇÀ» ±¸ÇöÇÏ±â À§ÇØ¼­, °£°İ: 30px -> 30ÀÌ¶ó°í »ı°¢! */
+    /*tip, ê¸€ìì˜ ê°„ê²©, ë„ˆë¬´ ë¶™ì–´ ìˆìœ¼ë©´ ê¸€ìê°€ ì¼ë¶€ ì§¤ë¦¬ëŠ” ê²½ìš°ê°€ ìˆë‹¤.*/
+    /*ì´ë¦„ì´ ìˆœì°¨ì ìœ¼ë¡œ ì˜¬ë¼ê°€ëŠ” ì‘ì—… ìœ„í•´ì„œ, ì¢Œí‘œ ì´ˆê¸° ìœ„ì¹˜ ì„¤ì •*/
+    /*ìˆœì°¨ì ìœ¼ë¡œ ë‚´ë ¤ê°€ëŠ” ëª¨ì…˜ì„ êµ¬í˜„í•˜ê¸° ìœ„í•´ì„œ, ê°„ê²©: 30px -> 30ì´ë¼ê³  ìƒê°! */
     margin-bottom: 30px; 
 }
 
@@ -95,29 +95,52 @@ body{
     display: inline-block;
     color: white;
     /*background-color: red;*/
-    vertical-align: top; /*webÀÇ »ó´Ü ºÎºĞ ¸ÂÃß´Â ÀÛ¾÷*/
+    vertical-align: top; /*webì˜ ìƒë‹¨ ë¶€ë¶„ ë§ì¶”ëŠ” ì‘ì—…*/
 
-    /*Á÷¾÷ ÀÌ¸§ ¿òÁ÷ÀÌ´Â ¿ø¸®*/
-    height: 1.5em; /*(¿µ¿ª Á¤ÇÏ±â) ³ôÀÌ Á¦ÇÑ, º¸ÀÌ´Â ±ÛÀÚÀÇ ÃÖ°í fontÅ©±â¸¦ ¼³Á¤*/
-    overflow: hidden; /*(¼û±â±â) ¿µ¿ª¿¡¼­ ¹ù¾î³ª´Â ±ÛÀÚ ¼û±â±â */
-    /*Á÷¾÷ ÀÌ¸§ ¿Ã¶ó°¡°Ô ÇÏ´Â ¿ø¸®, ÁÂÇ¥ ÀÌµ¿*/
-    /*margin ¿ä¼Ò´Â µÚ¿¡ ¿À´Â ¿ä¼Ò¿¡ ¿µÇâÀ» ÁØ´Ù! so, html¿¡¼­ ¿òÁ÷ÀÏ ¿µ¿ªÀ¸·Î ³ª´µ¾î ÁØ´Ù*/
+    /*ì§ì—… ì´ë¦„ ì›€ì§ì´ëŠ” ì›ë¦¬*/
+    height: 1.5em; /*(ì˜ì—­ ì •í•˜ê¸°) ë†’ì´ ì œí•œ, ë³´ì´ëŠ” ê¸€ìì˜ ìµœê³  fontí¬ê¸°ë¥¼ ì„¤ì •*/
+    overflow: hidden; /*(ìˆ¨ê¸°ê¸°) ì˜ì—­ì—ì„œ ë²‹ì–´ë‚˜ëŠ” ê¸€ì ìˆ¨ê¸°ê¸° */
+    /*ì§ì—… ì´ë¦„ ì˜¬ë¼ê°€ê²Œ í•˜ëŠ” ì›ë¦¬, ì¢Œí‘œ ì´ë™*/
+    /*margin ìš”ì†ŒëŠ” ë’¤ì— ì˜¤ëŠ” ìš”ì†Œì— ì˜í–¥ì„ ì¤€ë‹¤! so, htmlì—ì„œ ì›€ì§ì¼ ì˜ì—­ìœ¼ë¡œ ë‚˜ë‰˜ì–´ ì¤€ë‹¤*/
 
-    /*¿À¸¥ÂÊ ±Û¾¾°¡ Â©·Á¼­ È®Àå*/
+    /*ì˜¤ë¥¸ìª½ ê¸€ì”¨ê°€ ì§¤ë ¤ì„œ í™•ì¥*/
     padding-right: 0.5em;
 }
 
 .name-job-list{
-    /*margin-top: 0em; ºñÀ²ÀÌ À¯µ¿ÀûÀ¸·Î º¯È­ÇÒ¼ö ÀÖµµ·Ï Á¶Á¤ÇØ µÎ´Â °Í*/
+    /*margin-top: 0em; ë¹„ìœ¨ì´ ìœ ë™ì ìœ¼ë¡œ ë³€í™”í• ìˆ˜ ìˆë„ë¡ ì¡°ì •í•´ ë‘ëŠ” ê²ƒ*/
     animation-name: rolling;
-    animation-duration: 5s; /*³Ñ¾î°¡´Â ¼Óµµ*/
-    animation-iteration-count: infinite; /*¹İº¹µÇ´Â È½¼ö loop*/
-    /*animation ¿¬Ãâ ¹æÇâ, animation-direction*/
+    animation-duration: 5s; /*ë„˜ì–´ê°€ëŠ” ì†ë„*/
+    animation-iteration-count: infinite; /*ë°˜ë³µë˜ëŠ” íšŸìˆ˜ loop*/
+    /*animation ì—°ì¶œ ë°©í–¥, animation-direction*/
 
 }
 
+
 .name-title{
-    font-size: 1.5em; /*ÀÌ¸§ fontÀÇ Å©±â º¯È­, nameÀÌ¶ó´Â divÀÇ ¼³Á¤¿¡ ºñ·ÊÇÏ¿© º¯µ¿*/
+    font-size: 1.5em; /*ì´ë¦„ fontì˜ í¬ê¸° ë³€í™”, nameì´ë¼ëŠ” divì˜ ì„¤ì •ì— ë¹„ë¡€í•˜ì—¬ ë³€ë™*/
     line-height: 1;
     color: white;
 }
+
+.icons
+{
+    
+}
+
+.icons a{
+    background-image: url(icons.png);
+    /*ì´ë¯¸ì§€ í™œìš©ì„ ìœ„í•´ì„œ ì´ë¯¸ì§€ í¬ê¸° ì¡°ì ˆì´ í•„ìš”í–ˆìŒ*/
+    width: 30px; 
+    height: 30px; 
+    display: inline-block; /*icon ê°€ë¡œ ë°°ì¹˜*/ 
+    /*<a> tag ê¸€ì ì¶œë ¥ì´ ë³´ì´ì§€ ì•Šë„ë¡í•˜ëŠ” ê²ƒ, image replacement ê¸°ë²•*/
+    text-indent: -9999px;
+}
+
+/*issue ì´ë¯¸ì§€ ì „í™˜ì´ ì´ë£¨ì–´ì§€ì§€ ì•ŠìŒ */
+.icons a.email      { background-position: left top;}
+.icons a.tel        { background-position: center top;}
+.icons a.Linkedin   { background-position: right top;}
+
+

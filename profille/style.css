@@ -39,10 +39,12 @@ body, h1, h2, p, ul{
     padding: 0;
 }
 
-/*ul의 순서 첨자 삭제*/
-li{
+/*ul의 순서 첨자 삭제, html li속성이 나타나지 않도록 하는 요인*/
+.profile-section-list{
 list-style-type: none;
 }
+
+
 
 
 /*h의 글자 크기, 문체 수정*/
@@ -68,7 +70,7 @@ body{
 
 .portrait 
 {
-    background-image: url(profile.png);
+    background-image: url(me2.jpg);
     background-size: cover;
     background-position: center;
     padding-top: 59.95%;
@@ -84,8 +86,9 @@ body{
 }
 
 .profile-section h2 {
-    border-top: 3px solid;
+    border-top: 5px solid;
     color: orangered; 
+    font-size: 1.5rem;
 }
 
 .name{
@@ -202,8 +205,17 @@ body{
     background: url('icons.png') -60px -30px;
   }
 
+/*profile section (major, work experience)*/
+.experience h3
+{
+    color: orange;
+    font-size: 1.2rem;
+
+}
+
 /*easy_find Link*/
   #easy{
     font-style: italic;
-    color: blue;
+    color: rgb(79, 79, 233);
   }
+

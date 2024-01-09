@@ -34,7 +34,7 @@
 
 /*[시작] CSS 작업에 앞서 reset과정!*/
 
-body, h1, p, ul{
+body, h1, h2, p, ul{
     margin: 0;
     padding: 0;
 }
@@ -46,7 +46,7 @@ list-style-type: none;
 
 
 /*h의 글자 크기, 문체 수정*/
-h1{
+h1, h2{
     font-size: 100%;
     font-weight: normal;
 }
@@ -65,6 +65,7 @@ body{
     color: #999;
 }
 
+
 .portrait 
 {
     background-image: url(profile.png);
@@ -77,8 +78,14 @@ body{
     padding: 7%;
 }
 
-.profile-header, .profile-section {
-    padding-bottom: 7%;
+.profile-header,
+.profile-section {
+    padding-bottom: 14%;
+}
+
+.profile-section h2 {
+    border-top: 3px solid;
+    color: orangered; 
 }
 
 .name{
@@ -116,31 +123,87 @@ body{
 
 }
 
-
 .name-title{
     font-size: 1.5em; /*이름 font의 크기 변화, name이라는 div의 설정에 비례하여 변동*/
     line-height: 1;
     color: white;
 }
 
-.icons
+/*연락 버튼(email, tel, Linkedin) 입력을 넣기 위해서 만든 css 코드*/
+ 
+/* .icons
 {
     
 }
 
 .icons a{
-    background-image: url(icons.png);
-    /*이미지 활용을 위해서 이미지 크기 조절이 필요했음*/
+    background-image: url("icons.png");
+    //이미지 활용을 위해서 이미지 크기 조절이 필요했음
     width: 30px; 
     height: 30px; 
-    display: inline-block; /*icon 가로 배치*/ 
-    /*<a> tag 글자 출력이 보이지 않도록하는 것, image replacement 기법*/
+    display: inline-block; //icon 가로 배치 
+    //<a> tag 글자 출력이 보이지 않도록하는 것, image replacement 기법
     text-indent: -9999px;
+
+    
 }
 
-/*issue 이미지 전환이 이루어지지 않음 */
-.icons a.email      { background-position: left top;}
-.icons a.tel        { background-position: center top;}
-.icons a.Linkedin   { background-position: right top;}
+//issue 이미지 전환이 이루어지지 않음
+.icons a.email { background-position: 0 0; }
+.icons a.tel { background-position: -30px 0; } //center
+.icons a.Linkedin { background-position: -60px 0; } right */
 
 
+#navlist {
+    position: relative;
+  }
+  
+  #navlist li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+  }
+  
+  #navlist li, #navlist a {
+    height: 30px;
+    display: block;
+  }
+  
+  #email {
+    left: 0px;
+    width: 30px;
+    background: url('icons.png') 0 0;
+  }
+  
+  #tel {
+    left: 30px;
+    width: 30px;
+    background: url('icons.png') -30px 0;
+  }
+  
+  #Linkedin {
+    left: 60px;
+    width: 30px;
+    background: url('icons.png') -60px 0;
+  }
+  
+  /*마우스 포인터가 접촉되었을때 반응, hover라고 한다. */
+  #email a:hover {
+    background: url('icons.png') 0 -30px;
+  }
+  
+  #tel a:hover {
+    background: url('icons.png') -30px -30px;
+  }
+  
+  #Linkedin a:hover {
+    background: url('icons.png') -60px -30px;
+  }
+
+/*easy_find Link*/
+  #easy{
+    font-style: italic;
+    color: blue;
+  }

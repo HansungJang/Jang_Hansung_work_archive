@@ -67,7 +67,7 @@ body{
     color: #999;
 }
 
-
+/*상단 배경 이미지 사입 및 설정 부분*/
 .portrait 
 {
     background-image: url(me2.jpg);
@@ -75,9 +75,12 @@ body{
     background-position: center;
     padding-top: 59.95%;
 }
+
+
 .profile
 {
-    padding: 7%;
+    padding: 4%;
+    min-height: 5000px;
 }
 
 .profile-header,
@@ -89,6 +92,13 @@ body{
     border-top: 5px solid;
     color: orangered; 
     font-size: 1.5rem;
+    /*Profile section title 값이 스크롤 하는 동안 이어지도록 하는 작업*/
+   /* border: 1px solid red; 영역*/ 
+    position: sticky;  /*상단 이미지 고정 명령어*/
+    top:0%;  /*이어지는 영역 시작점?? -> 해당부분 역할은?? */
+    background-color: #111; 
+    box-shadow: 0 0 10px 10px #111; /*그림자 느낌, 투명도*/
+
 }
 
 .name{
@@ -157,11 +167,19 @@ body{
 .icons a.Linkedin { background-position: -60px 0; } right */
 
 
-#navlist {
+#contactlist {
+    /*
+    기준점을 상속받겠다는 의미. (없는 경우 기준은 viewport가 된다고 함)
+    [참고자료] https://creamilk88.tistory.com/197 
+    자료를 통해서는 조금 이해가 어려워.. 
+    w3school 
+    >> https://www.w3schools.com/css/css_positioning.asp 
+    */
+    
     position: relative;
   }
   
-  #navlist li {
+  #contactlist li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -169,7 +187,7 @@ body{
     top: 0;
   }
   
-  #navlist li, #navlist a {
+  #contactlist li, #contactlist a {
     height: 30px;
     display: block;
   }
@@ -184,6 +202,7 @@ body{
     left: 30px;
     width: 30px;
     background: url('icons.png') -30px 0;
+    
   }
   
   #Linkedin {
@@ -208,9 +227,20 @@ body{
 /*profile section (major, work experience)*/
 .experience h3
 {
+  border-top: 3px solid;
+  
     color: orange;
     font-size: 1.2rem;
 
+}
+
+/*
+easy_find 링크 밑줄 그어지는 효과
+[참고자료]: https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+*/
+#experience-link
+{
+  text-decoration: underline;
 }
 
 /*easy_find Link*/
@@ -219,3 +249,21 @@ body{
     color: rgb(79, 79, 233);
   }
 
+  /*pc 화면 크기에 대응하여 변동적인 화면 구성을 위해서*/ 
+@media(min-width: 768px){
+  /*화면 구성 수정 */  
+  
+  .portrait{ /*배경 이미지*/
+      position: fixed; 
+      left: 0; 
+      top: 0; 
+      width: 60vw; 
+      height: 100vh;
+      /*padding-top 사용한다면 지정 크기에 width, height가 합한 값이 된다*/
+      padding: 0; /*기존 padding값을 초기화*/ 
+      /*padding, margin 이란? https://velog.io/@bami/CSS-%EB%A7%88%EC%A7%84margin%EA%B3%BC-%ED%8C%A8%EB%94%A9padding*/
+    }
+    .profile{ /*profile 내용들*/
+      margin-left: 60vw;
+    }
+}

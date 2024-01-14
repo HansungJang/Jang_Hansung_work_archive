@@ -73,7 +73,7 @@
             </div>
             <div class ="profile-section">
                 <h2>Major & Experience</h2>
-                <ul class="experience">
+                <ul class="profile-section-style">
                     <li class ="profile-section-list">
                         <h3>Major</h3>
                         <ol>
@@ -131,7 +131,7 @@
             <!--Goal section -->
             <div class ="profile-section">
                 <h2>Goal</h2> 
-                <ul class="experience">
+                <ul class="profile-section-style">
                     <li class ="profile-section-list">
                         <h3>2024 winter vacation</h3>
                         <ol type="1"> <!--적용이 되지 않음?, css에서 초기화 때문?-->
@@ -150,7 +150,7 @@
             <!--More about me section -->
             <div class ="profile-section">
                 <h2>More about me</h2>
-                <ul class="experience">
+                <ul class="profile-section-style">
                     <li class ="profile-section-list">
                         <h3>Strength</h3>
                         <p>
@@ -206,10 +206,20 @@
                         <p>[Hate]: 물에서 사는 친구들은 아직 조금... 친하지 않아요; </p>
 
                         <h3>TMI</h3>
-                        <p>부모님댁에 같이 산책을 나가서 우리집 멍멍이가 응가한 이후 경쾌하게 뒤돌아 보는 귀여운 멍멍이를 키우고 있습니다. 
-                          "가끔 그 친구 표정에서 성취감이 느껴져요"
-                        </p><br>
+                        <p>
+                            부모님댁에 응가한 이후 경쾌하게 뒤돌아 보는 귀여운 멍멍이를 키우고 있습니다. 
+                        </p>
+                        <br>
+                        <!--video insertion tag-->
+                        <!--참고자료: 
+                            1) video tag에 대해서: https://www.w3schools.com/html/html5_video.asp
+                            2) 반복재생, 음소거 기능 추가: https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kira4195&logNo=221249440427
+                        -->
 
+                        <video width="300" height="200" autoplay loop muted>
+                            <source src="puppy.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </li>
 
                 </ul>
@@ -218,13 +228,45 @@
             <!--Reference section -->
             <div class ="profile-section">
                 <h2>Reference & Study</h2> 
-                <ul class="experience">
+                <ul class="profile-section-style">
                     <li class ="profile-section-list">
                         <h3>Reference</h3>
-                        <p> profile 과제를 진행하며 참고한 자료 출처와 배우개된 점을 정리한 paige 입니다.</p><br>
-                        <ul> 
-                            <li><a href="https://youtu.be/KYo62fhaR7M?si=cVwOFuIAjzek3Td0">Profile Outline</a></li>                        
-                        </ul>
+                        <p>
+                             profile 과제를 진행하며 참고한 자료 출처 입니다. 
+                             <br>
+                             <br>
+                            <div class="reference-subtitle">[참고 자료]</div>
+                             Project Outline: 
+                             <ul  class="outline-list"> 
+                                <li  class="Reference-link"><a href="https://youtu.be/KYo62fhaR7M?si=JW931ffjVOEd_Ysb">반응형 자기소개 웹사이트 따라 만들기(티티하우스/빔캠프)</a></li>
+                             </ul><br>
+                             HTML 문법 참고 영상: <br>
+                             <ol type="1">
+                             <li><a class="Reference-link" href="https://www.youtube.com/watch?v=tZooW6PritE&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb">WEB1 HTML & Internet(생활코딩)</a></li>
+                             <li><a class="Reference-link" href="https://youtu.be/VcUqKxMytm8?si=TNfRePgcxSizGMoa">포트폴리오 웹사이트 코딩#2, 3(조제의 세계)</a></li> 
+                            </ol>
+                            <br>
+                            <div class="reference-subtitle">[추가 공부]</div>
+                             추가적으로 CSS, Javascript영상을 보면서 project에 사용한 tag및 기능들의 용도를 
+                             이해하는데 많은 도움을 받아서 공유합니다. <br><br>
+                             CSS - <a class="Reference-link" href="https://youtu.be/Ok0bBJPtgJI?si=LTGtpI3Zra88Yxsi">WEB2 CSS(생활코딩)</a><br>
+                             Javascript - <a class="Reference-link" href="https://youtu.be/dPRtcRwKo-Y?si=qZ8B2yT1UeVUt4rx ">WEB2 JavaScript(생활코당)</a><br>
+                             <br>
+                            <div class="reference-subtitle">[기능 검색]</div>
+                             <ul  class="outline-list">
+                             <li>Element의 쓰임이 궁금할 때: <a class="Reference-link" href="https://www.w3schools.com/">w3school</a></li>
+                             <li>Browser에서 지원하는 기능인지 조회할 때: <a class="Reference-link" href=" https://caniuse.com/">can i use</a></li>
+                             </ul>
+                        </p>
+                    </li>
+
+
+                    <li class ="profile-section-list">
+                        <h3>Study</h3>
+                        <p>
+                            Profile과제를 진행하며 공부한 내용을 정리한 Notion 입니다.<br>
+                            [링크] <a class="Reference-link" href="https://even-fowl-553.notion.site/Web-9b0bc2229ac14f669434516150a36032?pvs=4">멋쟁이 사자 과제 study 기록</a>
+                        </p>
                     </li>
                 </ul>
 

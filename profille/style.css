@@ -34,9 +34,22 @@
 
 /*[시작] CSS 작업에 앞서 reset과정!*/
 
+/*
+CSS 기본 개념 
+1) block, inline element; 요소의 범위가 웹 전체 영역
+(block: 쉽게 줄바꿈을 일으키는 요소, inline: context크기 만큼 영역) 
+2) context, padding, border, margin 의미
+[참고자료]
+1. 생활코딩 web2 - CSS(박스모델): https://youtu.be/MLjCVUspcDo?si=pOntIIy7U0ZfR4WS
+2. 검색 블로그 글: https://velog.io/@taeha7b/block-Inline-box-model 
+
+*/
+
+
 body, h1, h2, p, ul{
     margin: 0;
     padding: 0;
+    
 }
 
 /*ul의 순서 첨자 삭제, html li속성이 나타나지 않도록 하는 요인*/
@@ -82,15 +95,21 @@ body{
 .profile
 {
     padding: 4%;
-    min-height: 5000px;
+    min-height: 4500px;
 }
 
 .profile-header,
 .profile-section {
     padding-bottom: 14%;
+    /*
+    padding bottom의 역할
+    (contents의 경계 일정간격 떨어지게, 해당 코드에서는 Profile 내용별 구분 가독성을 위해서 사용)
+    */
 }
 
 .profile-section h2 {
+  /*profile 경계선 style(border-top)*/
+  /*https://www.w3schools.com/cssref/pr_border-top.php*/
     border-top: 5px solid;
     color: orangered; 
     font-size: 1.5rem;
@@ -100,7 +119,6 @@ body{
     top:0%;  /*이어지는 영역 시작점?? -> 해당부분 역할은?? */
     background-color: #111; 
     box-shadow: 0 0 10px 10px #111; /*그림자 느낌, 투명도*/
-
 }
 
 .name{
@@ -236,8 +254,8 @@ body{
     background: url('icons.png') -60px -30px;
   }
 
-/*profile section (major, work experience)*/
-.experience h3
+/*profile section (profile section의 요소들에 모두 적용)*/
+.profile-section-style h3
 {
   border-top: 3px solid;
   
@@ -250,18 +268,16 @@ body{
 easy_find 링크 밑줄 그어지는 효과
 [참고자료]: https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
 */
+
+/*easy_find Link*/
 #experience-link
 {
   text-decoration: underline;
+  color: rgb(77, 77, 233);
 }
 
-/*easy_find Link*/
-  #easy{
-    font-style: italic;
-    color: rgb(79, 79, 233);
-  }
-
   #easy_find_role{
+    /*ul 테그 list요소들이 안쪽으로 점이 찍히도록 하는 것*/
     list-style-position: inside;
   }
 
@@ -269,6 +285,22 @@ easy_find 링크 밑줄 그어지는 효과
 /*Mbti 링크 표시*/
 #click_me{
   font-size: 0.75rem;
+}
+
+/*Reference 링크 표시*/
+
+.Reference-link{
+  text-decoration: underline;
+}
+
+.reference-subtitle{
+  font-size: 1.15em;
+  font-weight: bold; /*bold체 선언, https://www.w3schools.com/cssref/pr_font_weight.php*/
+}
+
+.outline-list{
+  list-style-position: inside;
+
 }
 
 

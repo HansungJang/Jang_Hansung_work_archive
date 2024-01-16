@@ -1,0 +1,77 @@
+<!--
+    Task 
+    1. app, web 버전의 상품 소개 페이지를 작성 (media_query)
+    2. add_botton 클릭하는 경우, hover효과가 발생하도록 (.hover)
+    3. 상품 이미지와 설명(grid 활용)
+
+    관찰한 요소
+    1. media-query 발생, min-width: 750 px
+    2. style.css 파일에 grid 요솔를 이용하여 화면 구성 (사진, 설명 2요인을 별개 그룹으로 묶어주는 작업이 필요)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Task2_ Jang, Hansung</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="grid">
+      <!-- Class 요소 (1. 이미지, 2. 상품 설명)-->
+
+      <!--1. 상품 이미지 Load-->
+      <!--
+            새로 알게된 문법 #1
+            'alt' -> 해당 attribute은 이미지 압로드 실패한 경우 출력될 설명 text
+            https://www.w3schools.com/html/html_images.asp
+        -->
+      <div class="grid_portrait">
+        <img id="deskTop" src="image-product-desktop.jpg" />
+        <img id="mobile" src="image-product-mobile.jpg" />
+      </div>
+
+      <!--2. 상품 설명-->
+      <div class="gridItem">
+        <div class="category">PERFUME</div>
+        <div class="name"><h1>Gabrielle Essence Eau De Parfum</h1></div>
+        <div class="detail">
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+        </div>
+        <div class="price">
+          <span class="now-price">$149.99</span>
+          <span class="origin-price">$169.99</span>
+        </div>
+        <div class="add">
+          <img src="shopping-bag.png" alt="shopping-bag" />
+          <span>Add to Cart</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      " Challenge & Original source_code by "
+      <a
+        href="https://github.com/healim01/Likelion/tree/main/product-preview-card-component-main"
+        target="_blank"
+      >
+        Hailey Choi
+      </a>
+      <!--
+                새로 알게된 문법 #2
+                target: _blank, url 여는 방식 결정
+                https://www.w3schools.com/tags/att_a_target.asp
+            -->
+
+      ". Coded by "
+      <a href="https://github.com/HansungJang/Lion_HGU_2024_Jang"
+        >Hansung Jang</a
+      >
+    </div>
+  </body>
+</html>

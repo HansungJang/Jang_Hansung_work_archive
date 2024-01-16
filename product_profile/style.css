@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(https://fonts.google.com/specimen/Montserrat);
+}
+
+@font-face {
+  font-family: 2em "Fraunces";
+  src: url(https://fonts.google.com/specimen/Fraunces);
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  color: hsl(228, saturation, lightness);
+  /*
+    새로 알게된 문법 #3
+    hsl : (색상, 투명도, 밝기)
+    https://www.w3schools.com/colors/colors_hsl.asp
+    */
+  font-family: "Montserrat";
+  display: block;
+  margin: 8px;
+}
+
+div {
+  display: block;
+}
+
+.grid {
+  width: 100%;
+  max-width: 800px;
+  place-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b";
+
+  margin: 10em auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+
+.grid_portrait {
+}
+
+#deskTop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+#mobile {
+  display: none;
+}
+
+.gridItem {
+  max-height: 500px;
+  padding-left: 5%;
+}
+
+.category {
+  letter-spacing: 0.4em;
+}
+
+.name {
+  font-family: "Fraunces";
+  font-weight: 700px;
+}
+
+.detail {
+}
+
+.now-price {
+  font-family: "Fraunces";
+  font-weight: 700px;
+  font-size: 2em;
+}
+
+.origin-price {
+  text-decoration: line-through;
+}
+
+.add {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid red;
+  text-align: center;
+  color: hsl(30, 38%, 92%);
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 5px;
+}
+
+.add:hover {
+  background-color: hsl(228, 12%, 48%);
+  box-shadow: 2px 2px hsl(212, 21%, 14%);
+  color: white;
+}
+
+/*Mobile version*/
+@media (max-width: 750px) {
+  .grid {
+    max-width: 375px;
+    display: block;
+    margin: 3em auto;
+  }
+
+  #deskTop {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}

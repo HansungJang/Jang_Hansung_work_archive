@@ -1,23 +1,13 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url(https://fonts.google.com/specimen/Montserrat);
-}
-
-@font-face {
-  font-family: 2em "Fraunces";
-  src: url(https://fonts.google.com/specimen/Fraunces);
-}
-
 body {
   background-color: hsl(30, 38%, 92%);
   color: hsl(228, saturation, lightness);
   /*
-    »õ·Î ¾Ë°ÔµÈ ¹®¹ı #3
-    hsl : (»ö»ó, Åõ¸íµµ, ¹à±â)
+    ìƒˆë¡œ ì•Œê²Œëœ ë¬¸ë²• #3
+    hsl : (ìƒ‰ìƒ, íˆ¬ëª…ë„, ë°ê¸°)
     https://www.w3schools.com/colors/colors_hsl.asp
     */
   font-family: "Montserrat";
-  display: block;
+  display: inline;
   margin: 8px;
 }
 
@@ -28,6 +18,7 @@ div {
 .grid {
   width: 100%;
   max-width: 800px;
+
   place-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,9 +27,6 @@ div {
   margin: 10em auto;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
-}
-
-.grid_portrait {
 }
 
 #deskTop {
@@ -53,37 +41,49 @@ div {
   display: none;
 }
 
+/*  
+****
+********   #ì„¤ëª… ì˜ì—­
+*/
 .gridItem {
-  max-height: 500px;
-  padding-left: 5%;
+  height: 100%;
+  padding: 10%; /*ì „ì²´ í…ìŠ¤íŠ¸ì˜ ê±°ë¦¬ ìš”ì†Œ*/
+  font-family: "Montserrat", sans-serif;
 }
 
 .category {
-  letter-spacing: 0.4em;
+  padding-top: 50px;
+  letter-spacing: 0.6em;
+  color: hsl(158, 36%, 37%);
 }
 
 .name {
-  font-family: "Fraunces";
-  font-weight: 700px;
+  font-family: "Fraunces", serif;
+  font-weight: 700%;
+  font-size: 1.3em;
 }
 
 .detail {
+  font-size: 16px;
+  font-weight: 500%;
+  line-height: 2;
 }
 
 .now-price {
-  font-family: "Fraunces";
-  font-weight: 700px;
+  font-family: "Fraunces", serif;
+  font-weight: 700%;
   font-size: 2em;
+  color: hsl(158, 36%, 37%);
 }
 
 .origin-price {
   text-decoration: line-through;
+  padding-left: 15px;
 }
 
 .add {
   margin: 20px;
   padding: 20px;
-  border: 1px solid red;
   text-align: center;
   color: hsl(30, 38%, 92%);
   background-color: hsl(158, 36%, 37%);
@@ -115,5 +115,9 @@ div {
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+  }
+
+  .category {
+    padding-top: 0; /*ì´ˆê¸°í™” ì„¤ì •*/
   }
 }

@@ -1,12 +1,12 @@
 <!--
     Task 
-    1. app, web ¹öÀüÀÇ »óÇ° ¼Ò°³ ÆäÀÌÁö¸¦ ÀÛ¼º (media_query)
-    2. add_botton Å¬¸¯ÇÏ´Â °æ¿ì, hoverÈ¿°ú°¡ ¹ß»ýÇÏµµ·Ï (.hover)
-    3. »óÇ° ÀÌ¹ÌÁö¿Í ¼³¸í(grid È°¿ë)
+    1. app, web ë²„ì „ì˜ ìƒí’ˆ ì†Œê°œ íŽ˜ì´ì§€ë¥¼ ìž‘ì„± (media_query)
+    2. add_botton í´ë¦­í•˜ëŠ” ê²½ìš°, hoveríš¨ê³¼ê°€ ë°œìƒí•˜ë„ë¡ (.hover)
+    3. ìƒí’ˆ ì´ë¯¸ì§€ì™€ ì„¤ëª…(grid í™œìš©)
 
-    °üÂûÇÑ ¿ä¼Ò
-    1. media-query ¹ß»ý, min-width: 750 px
-    2. style.css ÆÄÀÏ¿¡ grid ¿ä¼Ö¸¦ ÀÌ¿ëÇÏ¿© È­¸é ±¸¼º (»çÁø, ¼³¸í 2¿äÀÎÀ» º°°³ ±×·ìÀ¸·Î ¹­¾îÁÖ´Â ÀÛ¾÷ÀÌ ÇÊ¿ä)
+    ê´€ì°°í•œ ìš”ì†Œ
+    1. media-query ë°œìƒ, min-width: 750 px
+    2. style.css íŒŒì¼ì— grid ìš”ì†”ë¥¼ ì´ìš©í•˜ì—¬ í™”ë©´ êµ¬ì„± (ì‚¬ì§„, ì„¤ëª… 2ìš”ì¸ì„ ë³„ê°œ ê·¸ë£¹ìœ¼ë¡œ ë¬¶ì–´ì£¼ëŠ” ìž‘ì—…ì´ í•„ìš”)
 -->
 
 <!DOCTYPE html>
@@ -14,18 +14,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Font-style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
     <title>CSS Task2_ Jang, Hansung</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="grid">
-      <!-- Class ¿ä¼Ò (1. ÀÌ¹ÌÁö, 2. »óÇ° ¼³¸í)-->
+      <!-- Class ìš”ì†Œ (1. ì´ë¯¸ì§€, 2. ìƒí’ˆ ì„¤ëª…)-->
 
-      <!--1. »óÇ° ÀÌ¹ÌÁö Load-->
+      <!--1. ìƒí’ˆ ì´ë¯¸ì§€ Load-->
       <!--
-            »õ·Î ¾Ë°ÔµÈ ¹®¹ý #1
-            'alt' -> ÇØ´ç attributeÀº ÀÌ¹ÌÁö ¾Ð·Îµå ½ÇÆÐÇÑ °æ¿ì Ãâ·ÂµÉ ¼³¸í text
+            ìƒˆë¡œ ì•Œê²Œëœ ë¬¸ë²• #1
+            'alt' -> í•´ë‹¹ attributeì€ ì´ë¯¸ì§€ ì••ë¡œë“œ ì‹¤íŒ¨í•œ ê²½ìš° ì¶œë ¥ë  ì„¤ëª… text
             https://www.w3schools.com/html/html_images.asp
         -->
       <div class="grid_portrait">
@@ -33,7 +41,7 @@
         <img id="mobile" src="image-product-mobile.jpg" />
       </div>
 
-      <!--2. »óÇ° ¼³¸í-->
+      <!--2. ìƒí’ˆ ì„¤ëª…-->
       <div class="gridItem">
         <div class="category">PERFUME</div>
         <div class="name"><h1>Gabrielle Essence Eau De Parfum</h1></div>
@@ -63,8 +71,8 @@
         Hailey Choi
       </a>
       <!--
-                »õ·Î ¾Ë°ÔµÈ ¹®¹ý #2
-                target: _blank, url ¿©´Â ¹æ½Ä °áÁ¤
+                ìƒˆë¡œ ì•Œê²Œëœ ë¬¸ë²• #2
+                target: _blank, url ì—¬ëŠ” ë°©ì‹ ê²°ì •
                 https://www.w3schools.com/tags/att_a_target.asp
             -->
 
